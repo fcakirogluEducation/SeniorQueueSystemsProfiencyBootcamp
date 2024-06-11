@@ -9,7 +9,9 @@ Console.WriteLine("Consumer");
 
 var connectionFactory = new ConnectionFactory()
 {
-    Uri = new Uri("amqps://loyxqdcn:qyjCkzpTkMWAXPCrpj4CyyD9dWeulTRB@woodpecker.rmq.cloudamqp.com/loyxqdcn")
+    //Uri = new Uri("amqps://loyxqdcn:qyjCkzpTkMWAXPCrpj4CyyD9dWeulTRB@woodpecker.rmq.cloudamqp.com/loyxqdcn")
+
+    HostName = "localhost"
 };
 
 using var connection = connectionFactory.CreateConnection();
@@ -17,6 +19,11 @@ using var channel = connection.CreateModel();
 
 
 channel.BasicQos(0, 5, true);
+
+channel.QueueDeclare("topic-queue", true, false, false, null);
+
+channel.QueueBind("topic-queue", "topic-exchange", "info.error.warning", null);
+
 
 var consumer = new EventingBasicConsumer(channel);
 
@@ -27,6 +34,11 @@ void Consumer_Received(object? sender, BasicDeliverEventArgs e)
 {
     try
     {
+        var properties = e.BasicProperties;
+
+        //read version header
+        var version = properties.Headers["version"];
+
         var message = Encoding.UTF8.GetString(e.Body.ToArray());
 
         Console.WriteLine($"Gelen Mesaj: {message}");
@@ -40,6 +52,6 @@ void Consumer_Received(object? sender, BasicDeliverEventArgs e)
     }
 }
 
-channel.BasicConsume("demo-queue", autoAck: false, consumer);
+channel.BasicConsume("topic-queue", autoAck: false, consumer);
 
 var x = Console.ReadLine();
