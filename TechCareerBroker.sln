@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice1.API", "Microservice1.API\Microservice1.API.csproj", "{5067AAE5-ADCA-4C1F-90FD-EB07472C74BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice1.API", "Microservice1.API\Microservice1.API.csproj", "{5067AAE5-ADCA-4C1F-90FD-EB07472C74BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice2.API", "Microservice2.API\Microservice2.API.csproj", "{2626A9A2-359A-4014-A29E-1C930B2B31E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice2.API", "Microservice2.API\Microservice2.API.csproj", "{2626A9A2-359A-4014-A29E-1C930B2B31E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.ServiceBus", "Shared.ServiceBus\Shared.ServiceBus.csproj", "{058BBFF2-EFC4-42E2-830C-1A3EA9C8BF46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.ServiceBus", "Shared.ServiceBus\Shared.ServiceBus.csproj", "{058BBFF2-EFC4-42E2-830C-1A3EA9C8BF46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kafka.Producer", "Kafka.Producer\Kafka.Producer.csproj", "{FC891E1B-1D64-4631-BBB7-8FD02907543B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kafka.Producer", "Kafka.Producer\Kafka.Producer.csproj", "{FC891E1B-1D64-4631-BBB7-8FD02907543B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kafka.Consumer", "Kafka.Consumer\Kafka.Consumer.csproj", "{D5A77B54-77F2-4AC1-B1B1-9DBF7E54FE55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kafka.Consumer", "Kafka.Consumer\Kafka.Consumer.csproj", "{D5A77B54-77F2-4AC1-B1B1-9DBF7E54FE55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerService1", "WorkerService1\WorkerService1.csproj", "{C75E6678-7C61-4279-8DE5-D13DBA9DE06E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroserviceKafka.API", "MicroserviceKafka.API\MicroserviceKafka.API.csproj", "{1A4B725C-253A-4FD6-B0C7-BF86D836E5C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{D5A77B54-77F2-4AC1-B1B1-9DBF7E54FE55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5A77B54-77F2-4AC1-B1B1-9DBF7E54FE55}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5A77B54-77F2-4AC1-B1B1-9DBF7E54FE55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C75E6678-7C61-4279-8DE5-D13DBA9DE06E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C75E6678-7C61-4279-8DE5-D13DBA9DE06E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C75E6678-7C61-4279-8DE5-D13DBA9DE06E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C75E6678-7C61-4279-8DE5-D13DBA9DE06E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A4B725C-253A-4FD6-B0C7-BF86D836E5C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A4B725C-253A-4FD6-B0C7-BF86D836E5C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A4B725C-253A-4FD6-B0C7-BF86D836E5C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A4B725C-253A-4FD6-B0C7-BF86D836E5C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
